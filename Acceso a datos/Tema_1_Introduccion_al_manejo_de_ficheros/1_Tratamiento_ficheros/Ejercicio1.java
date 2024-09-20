@@ -40,8 +40,6 @@ public class Ejercicio1 {
             File destinoFichero = new File(carpeta, "Ejemplo.txt");
             
 
-
-
         }catch(Exception e){
 
         }
