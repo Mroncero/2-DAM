@@ -1,1 +1,0 @@
-/* Ejercicio que saque de forma aleatoria una linea de un fichero txt y lo muestre por consola */
