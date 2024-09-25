@@ -158,6 +158,7 @@ public class ejercicio {
 
         // Funcionalidad-------------------------------------
 
+        //Boton guardar
         guardar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
@@ -190,7 +191,7 @@ public class ejercicio {
             }
         });
 
-        
+        //Boton Imprimir
         imprimir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
