@@ -30,6 +30,7 @@ Copiar una imagen binaria de un archivo de origen a un archivo de destino, usand
            while ((byteLeido = bis.read()) != -1) {
             bos.write(byteLeido);
            }
+           bos.flush(); //asegurar que se escriban todos los datos
 
            System.out.println("copia realizada con exito");
  
