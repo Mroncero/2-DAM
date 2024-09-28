@@ -1,4 +1,4 @@
-package Ejercicio_1_1;
+package Tema_1_Introduccion_al_manejo_de_ficheros.Ejercicio_1_1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -29,7 +29,7 @@ La información se almacena en variables globales (puedes modificar esto si pref
 Imprimir:
 Los datos que se guardaron previamente en las variables se escriben en un fichero matricula.txt en un formato óptimo para su lectura.
  */
-public class ejercicio {
+public class FormularioMatriculacion {
 
     // Variables funcionalidad
     private static String nom;
@@ -102,7 +102,7 @@ public class ejercicio {
         panel2.add(checkbox1);
         panel2.add(checkbox2);
 
-        ButtonGroup genGrupo = new ButtonGroup();
+        ButtonGroup genGrupo = new ButtonGroup(); //agrupamos para solo poder elegir una opcion
         genGrupo.add(checkbox1);
         genGrupo.add(checkbox2);
 

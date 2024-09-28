@@ -23,3 +23,9 @@ Año nacimiento: a
 Género: Femenino
 Titulación de acceso: FP grado medio
 Observaciones: a
+Nombre y Apellidos: a
+Email: a
+Año nacimiento: a
+Género: Femenino
+Titulación de acceso: Bachillerato
+Observaciones: asas
