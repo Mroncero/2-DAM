@@ -2,6 +2,8 @@ package layout;
 import java.awt.*;
 import javax.swing.*;
 
+
+/* Ejercicio 1: dos paneles en un frame con gridLayout y botones*/
 public class Ejercicio1 {
     public static void main(String[] args) {
         

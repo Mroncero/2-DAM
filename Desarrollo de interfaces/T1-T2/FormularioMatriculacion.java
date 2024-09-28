@@ -3,6 +3,7 @@ import java.awt.*;
 
 public class FormularioMatriculacion {
     public static void main(String[] args) {
+        /* La funcionalidad de este ejercicio esta en la carpeta Acceso a datos ejercicio1_1 */
 
         // Crear frame grid 5x1 ------------------------
         JFrame frame = new JFrame("Ejercicio 11: Formulario: matriculación alumno/a");
@@ -62,6 +63,10 @@ public class FormularioMatriculacion {
         panel2.add(genero);
         panel2.add(checkbox1);
         panel2.add(checkbox2);
+
+        ButtonGroup genGrupo = new ButtonGroup();
+        genGrupo.add(checkbox1);
+        genGrupo.add(checkbox2);
 
 
 

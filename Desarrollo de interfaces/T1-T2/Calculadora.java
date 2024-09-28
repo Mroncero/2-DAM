@@ -4,9 +4,12 @@ import java.awt.event.*;
 
 public class Calculadora {
 
+    /* Calculadora de dos números */
+
     static int num1;
     static int num2;
     static int posicion = 0;
+    static String operacion = "";
 
     public static void main(String[] args) {
 
@@ -67,8 +70,20 @@ public class Calculadora {
         panel2.add(boton16);
 
         // cambiar color botones
-        Color azul = new Color(150, 39, 90);
-        boton1.setBackground(azul);
+        Color grisClaro = new Color(208, 211, 212);
+        Color grisOscuro = new Color(179, 182, 183);
+        Color naranja = new Color(243, 156, 18);
+
+        for (JButton botones : new JButton[] { boton1, boton2, boton3, boton5, boton6, boton7, boton9, boton10, boton11,
+                boton13 }) {
+            botones.setBackground(grisClaro);
+        }
+
+        for (JButton botones : new JButton[] { boton4, boton8, boton12, boton14, boton16 }) {
+            botones.setBackground(grisOscuro);
+        }
+
+        boton15.setBackground(naranja);
 
         // Hacer visible y centrar
         frame.setVisible(true);
@@ -81,21 +96,123 @@ public class Calculadora {
          * en el panel de resultados
          */
 
-        boton1.addActionListener(new ActionListener() {
+        /*
+         * boton1.addActionListener(new ActionListener() {
+         * public void actionPerformed(ActionEvent e) {
+         * //es el primer numero
+         * if (posicion == 0) {
+         * num1 = 7;
+         * resultado.setText("" + num1);
+         * posicion++;
+         * }else{
+         * num2 = 7;
+         * posicion = 0;
+         * }
+         * 
+         * }
+         * });
+         */
+
+        ActionListener botonesNumericos = new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                //es el primer numero
-                if (posicion == 0) {
-                    num1 = 7;
+
+                JButton botonPresionado = (JButton) e.getSource(); // coger la ruta del objeto presionado y convertirlo
+                                                                   // a boton
+                int number = Integer.parseInt(botonPresionado.getText()); // obtener el texto del boton presionado y
+                                                                          // convertirlo a numero entero
+
+                if (posicion == 0) { // si estamos en la posición 0 quiere decir que es el primer boton presionado
+                    num1 = number;
                     resultado.setText("" + num1);
-                    posicion++;
-                }else{
-                    num2 = 7;
-                    posicion = 0;
+                    posicion++; // se incrementa uno ya hemos elegido el primero numero y se cambia a la
+                                // posición 1 para elegir el número 2
+                } else {
+                    num2 = number;
+                    resultado.setText("" + num2);
                 }
+            }
+        };
+
+        // añadir el metodo a los botones
+        for (JButton botones : new JButton[] { boton1, boton2, boton3, boton5, boton6, boton7, boton9, boton10, boton11,
+                boton13 }) {
+            botones.addActionListener(botonesNumericos);
+        }
+
+        // crear mas eventos para los otros botones
+        boton4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                operacion = "suma";
+                posicion = 1; // pasamos de posición para que podamos indicar el segundo numero
+            }
+        });
+
+        boton8.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                operacion = "resta";
+                posicion = 1;
+            }
+        });
+
+        boton12.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                operacion = "multiplicacion";
+                posicion = 1;
+            }
+        });
+
+        boton16.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                operacion = "division";
+                posicion = 1;
+            }
+        });
+
+        boton15.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                int resultadoFinal = 0;
+
+                switch (operacion) {
+                    case "suma":
+                        resultadoFinal = num1 + num2;
+                        break;
+                    case "resta":
+                        resultadoFinal = num1 - num2;
+                        break;
+                    case "multiplicacion":
+                        resultadoFinal = num1 * num2;
+                        break;
+                    case "division":
+                        if (num2 != 0) {
+                            resultadoFinal = num1 / num2;
+                            resultado.setText("Error: No se puede dividir un número entre 0");
+                            return;
+                        }
+                        break;
+                }
+
+                resultado.setText("" + resultadoFinal);
+
+                // reiniciar para otra operación
+                num1 = resultadoFinal;
+                num2 = 0;
+                operacion = "";
+                posicion = 0;
+            }
+        });
+
+        //boton reiniciar calculadora
+        boton14.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                num1 = 0;
+                num2 = 0;
+                operacion = "";
+                posicion = 0;
+                resultado.setText("");
 
             }
         });
 
     }
-
 }
