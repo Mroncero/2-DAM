@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.io.IOException;
 
 public class Ejercicio7AccesoADatosConINterfaz {
+    /* Se me ha ocurrido crear una interfaz gráfica para el Ejercicio7 de acceso a datos de
+     * Buffer del tema 1
+     */
 
     public static void main(String[] args) {
 
