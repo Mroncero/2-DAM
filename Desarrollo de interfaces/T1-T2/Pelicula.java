@@ -5,6 +5,10 @@ import javax.swing.*;
 public class Pelicula {
     public static void main(String[] args) {
 
+        /* Ejercicio de información de una pelicula
+         * https://www.figma.com/design/D9lHEzOfJkh4tjlh0qDBLK/Ejercicio2-Layout?node-id=0-1&t=HvSB6QPyXMKS9xvn-1
+         */
+
         // Frame grid
         JFrame frame = new JFrame("Ejercicio 10: Mi pelicula favorita");
         frame.setSize(500, 380);

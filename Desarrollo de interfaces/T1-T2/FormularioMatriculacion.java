@@ -3,7 +3,10 @@ import java.awt.*;
 
 public class FormularioMatriculacion {
     public static void main(String[] args) {
-        /* La funcionalidad de este ejercicio esta en la carpeta Acceso a datos ejercicio1_1 */
+        
+        /* La funcionalidad de este ejercicio esta en la carpeta Acceso a datos ejercicio1_1 
+         * https://www.figma.com/design/D9lHEzOfJkh4tjlh0qDBLK/Ejercicio2-Layout?node-id=0-1&t=HvSB6QPyXMKS9xvn-1
+        */
 
         // Crear frame grid 5x1 ------------------------
         JFrame frame = new JFrame("Ejercicio 11: Formulario: matriculación alumno/a");
@@ -109,11 +112,15 @@ public class FormularioMatriculacion {
         panel5.setLayout(new BorderLayout());
         frame.add(panel5);
 
+        //color botones
+        Color azul = new Color(79, 117, 162);
         //JButton guardar
         JButton guardar = new JButton("Guardar");
+        guardar.setBackground(azul);
 
         //JButton eliminar
         JButton eliminar = new JButton("Eliminar");
+        eliminar.setBackground(azul);
 
         panel5.add(guardar);
         panel5.add(eliminar);

@@ -4,7 +4,9 @@ import java.awt.event.*;
 
 public class Calculadora {
 
-    /* Calculadora de dos números */
+    /* Calculadora de dos números 
+     * https://www.figma.com/design/D9lHEzOfJkh4tjlh0qDBLK/Ejercicio2-Layout?node-id=0-1&t=HvSB6QPyXMKS9xvn-1
+    */
 
     static int num1;
     static int num2;
@@ -15,7 +17,7 @@ public class Calculadora {
 
         // Frame
         JFrame frame = new JFrame(" ");
-        frame.setSize(500, 380);
+        frame.setSize(360, 450);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
@@ -70,20 +72,21 @@ public class Calculadora {
         panel2.add(boton16);
 
         // cambiar color botones
-        Color grisClaro = new Color(208, 211, 212);
-        Color grisOscuro = new Color(179, 182, 183);
-        Color naranja = new Color(243, 156, 18);
+        Color azul = new Color(70, 113, 152);
+        Color verde = new Color(51, 143, 49);
+        Color blanco = new Color(255, 255, 255);
 
         for (JButton botones : new JButton[] { boton1, boton2, boton3, boton5, boton6, boton7, boton9, boton10, boton11,
                 boton13 }) {
-            botones.setBackground(grisClaro);
+            botones.setBackground(azul);
         }
 
-        for (JButton botones : new JButton[] { boton4, boton8, boton12, boton14, boton16 }) {
-            botones.setBackground(grisOscuro);
+        for (JButton botones : new JButton[] { boton4, boton8, boton12, boton16  }) {
+            botones.setBackground(verde);
         }
 
-        boton15.setBackground(naranja);
+        boton14.setBackground(blanco);
+        boton15.setBackground(blanco);
 
         // Hacer visible y centrar
         frame.setVisible(true);
