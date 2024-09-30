@@ -1,5 +1,3 @@
-package Tema_2;
-
 /* Ejemplo 2.1: Comunicación entre hilos en Java utilizando tuberías
 
 Descripción:

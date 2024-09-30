@@ -28,6 +28,7 @@ public class Calculadora {
         // textfield
         JTextField resultado = new JTextField();
         resultado.setPreferredSize(new Dimension(700, 80)); //no funciona con grid
+        resultado.setEnabled(false);
         panel.add(resultado);
         frame.add(panel, BorderLayout.NORTH);
 
