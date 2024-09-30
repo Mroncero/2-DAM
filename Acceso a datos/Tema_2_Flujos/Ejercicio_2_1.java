@@ -20,10 +20,8 @@ Asegúrate de que el programa maneje excepciones y errores apropiadamente.
 Nota: Debes utilizar las clases PipedInputStream, PipedOutputStream o PipedReader, PipedWriter para implementar la comunicación entre los hilos.
  */
 
- import java.awt.*;
- import java.awt.event.*;
- import java.io.*;
- import javax.swing.*;
+import java.io.*;
+
  
  public class Ejercicio_2_1 {
      public static void main(String[] args) {
