@@ -85,6 +85,7 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
              public void actionPerformed(ActionEvent e) {
                  double total = 0;
  
+                 //For que comprueba que los textfields no esten vacios y coge los textos introducidos
                  for (int i = 0; i < 5; i++) {
                      // Comprobar que no estén vacíos
                      if (precioFields[i].getText().isEmpty() || unidadFields[i].getText().isEmpty() || productoFields[i].getText().isEmpty()) {
@@ -101,7 +102,7 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
  
                  lresultado.setText(String.format("%.2f", total)); // Mostrar resultado con dos decimales
  
-                 // Construir una cadena con los resultados
+                 // Construir una cadena para mostrar los resultados
                  StringBuilder resultado = new StringBuilder();
                  for (int i = 0; i < 5; i++) {
                      resultado.append(nombreProductos[i]).append(": ").append(String.format("%.2f", precios[i] * unidades[i])).append("€\n");
