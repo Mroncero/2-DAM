@@ -58,31 +58,48 @@ public class EjercicioEvaluable_1 {
         JFrame frame = new JFrame("Cálculo de precios");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
-        frame.setLayout(new GridLayout(7, 4));
+        frame.setLayout(new GridLayout(7, 4,10,10));
 
         // Label texto
         JLabel espacio = new JLabel("");
         JLabel espacio2 = new JLabel("");
+     
         JLabel producto = new JLabel("Producto");
         producto.setFont(new Font("Arial", Font.BOLD, 12));
+        producto.setHorizontalAlignment(producto.CENTER);
+     
         JLabel precio = new JLabel("Precio");
         precio.setFont(new Font("Arial", Font.BOLD, 12));
+        precio.setHorizontalAlignment(precio.CENTER);
+     
         JLabel unidades = new JLabel("Unidades");
         unidades.setFont(new Font("Arial", Font.BOLD, 12));
+        unidades.setHorizontalAlignment(unidades.CENTER);
 
         // Labels numeros
         JLabel numero1 = new JLabel("1");
         numero1.setFont(new Font("Arial", Font.BOLD, 12));
+        numero1.setHorizontalAlignment(numero1.RIGHT);
+
         JLabel numero2 = new JLabel("2");
         numero2.setFont(new Font("Arial", Font.BOLD, 12));
+        numero2.setHorizontalAlignment(numero2.RIGHT);
+     
         JLabel numero3 = new JLabel("3");
         numero3.setFont(new Font("Arial", Font.BOLD, 12));
+        numero3.setHorizontalAlignment(numero3.RIGHT);
+     
         JLabel numero4 = new JLabel("4");
         numero4.setFont(new Font("Arial", Font.BOLD, 12));
+        numero4.setHorizontalAlignment(numero4.RIGHT);
+     
         JLabel numero5 = new JLabel("5");
         numero5.setFont(new Font("Arial", Font.BOLD, 12));
+        numero5.setHorizontalAlignment(numero5.RIGHT);
+     
         JLabel resultadoText = new JLabel("Precio Total: ");
         resultadoText.setFont(new Font("Arial", Font.BOLD, 12));
+        resultadoText.setHorizontalAlignment(resultadoText.RIGHT);
 
         // TextField
         JTextField l1 = new JTextField(10);
