@@ -41,8 +41,6 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
          JLabel precioLabel = new JLabel("Precio");
          JLabel unidadesLabel = new JLabel("Unidades");
          JLabel resultadoText = new JLabel("Precio Total: ");
-         JLabel espacio = new JLabel("");
-         JLabel espacio1 = new JLabel("");
          JTextField lresultado = new JTextField(10);
          lresultado.setEditable(false); // No editable
  
@@ -65,14 +63,17 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
          calcular.setBackground(azul);
  
          // Añadir componentes al frame
+         JLabel espacio = new JLabel(" ");
+         frame.add(espacio);
          frame.add(productoLabel);
          frame.add(precioLabel);
          frame.add(unidadesLabel);
          frame.add(new JLabel("")); // Espacio vacío
+¡
  
          
          for (int i = 0; i < 5; i++) {
-             frame.add(new JLabel(String.valueOf(i + 1))); // Número de producto
+             frame.add(new JLabel(String.valueOf(i + 1))); // la columna de números 1 al 5 de la izquierda
              frame.add(productoFields[i]);
              frame.add(precioFields[i]);
              frame.add(unidadFields[i]);
