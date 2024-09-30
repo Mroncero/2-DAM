@@ -207,7 +207,6 @@ public class EjercicioEvaluable_1 {
 
 
 
-
         // Hacer visible y centrar
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
