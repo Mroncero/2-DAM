@@ -25,7 +25,7 @@ Nota: Debes utilizar las clases PipedInputStream, PipedOutputStream o PipedReade
  import java.io.*;
  import javax.swing.*;
  
- public class Ejercicio2_1 {
+ public class Ejercicio_2_1 {
      public static void main(String[] args) {
          
          //Crea un programa Java que contenga dos hilos: Thread1 y Thread2.
